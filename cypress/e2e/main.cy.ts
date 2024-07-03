@@ -157,7 +157,7 @@ describe('main page', () => {
         const firstFilePath = 'cert.cer'
         // SUCCESS
         const secondFilePath = 'cert2.cer'
-        // FAIL
+        // FAIL An error occurred when trying to read the certificate
         const thirdFilePath = 'Тестовий_платник_4_(Тест)-8101906.cer'
         describe('check if data is shown correctly', () => {
             before(() => {
@@ -315,8 +315,6 @@ describe('main page', () => {
             it('first certificate should be shown', () => {
                 cy.get('.list-group').get('a').should('have.length', 1)
             })
-
-
         })
     })
 })
